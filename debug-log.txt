@@ -1,52 +1,52 @@
 ============================================================
 SPACESIM TEST LOG
-Generated: 2025-11-22T16:37:42.352Z
+Generated: 2025-11-22T16:57:57.264Z
 Results: 20 passed, 0 failed
 ============================================================
-[2025-11-22T16:37:42.322Z] [INFO] ============================================================
-[2025-11-22T16:37:42.328Z] [INFO] SPACESIM TEST RUNNER
-[2025-11-22T16:37:42.328Z] [INFO] ============================================================
-[2025-11-22T16:37:42.328Z] [INFO] 
-[2025-11-22T16:37:42.333Z] [INFO] Found 20 JavaScript files to test
-[2025-11-22T16:37:42.333Z] [INFO] 
-[2025-11-22T16:37:42.333Z] [INFO] --- SYNTAX CHECK ---
-[2025-11-22T16:37:42.334Z] [PASS] Syntax OK: src/config.js
-[2025-11-22T16:37:42.334Z] [PASS] Syntax OK: src/js/core/AssetManager.js
-[2025-11-22T16:37:42.335Z] [PASS] Syntax OK: src/js/core/AudioManager.js
-[2025-11-22T16:37:42.335Z] [PASS] Syntax OK: src/js/core/Engine.js
-[2025-11-22T16:37:42.336Z] [PASS] Syntax OK: src/js/core/Environment.js
-[2025-11-22T16:37:42.336Z] [PASS] Syntax OK: src/js/core/Game.js
-[2025-11-22T16:37:42.337Z] [PASS] Syntax OK: src/js/core/InputManager.js
-[2025-11-22T16:37:42.337Z] [PASS] Syntax OK: src/js/core/SceneManager.js
-[2025-11-22T16:37:42.338Z] [PASS] Syntax OK: src/js/entities/Entity.js
-[2025-11-22T16:37:42.338Z] [PASS] Syntax OK: src/js/entities/Planet.js
-[2025-11-22T16:37:42.338Z] [PASS] Syntax OK: src/js/entities/SolarSystem.js
-[2025-11-22T16:37:42.339Z] [PASS] Syntax OK: src/js/entities/Spacecraft.js
-[2025-11-22T16:37:42.339Z] [PASS] Syntax OK: src/js/entities/Star.js
-[2025-11-22T16:37:42.339Z] [PASS] Syntax OK: src/js/utils/DebugLogger.js
-[2025-11-22T16:37:42.340Z] [PASS] Syntax OK: src/js/utils/Gravity.js
-[2025-11-22T16:37:42.340Z] [PASS] Syntax OK: src/js/utils/KeplerianOrbit.js
-[2025-11-22T16:37:42.340Z] [PASS] Syntax OK: src/js/utils/MathUtils.js
-[2025-11-22T16:37:42.341Z] [PASS] Syntax OK: src/js/utils/PhysicsUtils.js
-[2025-11-22T16:37:42.341Z] [PASS] Syntax OK: src/js/utils/utils.js
-[2025-11-22T16:37:42.342Z] [PASS] Syntax OK: src/startup.js
-[2025-11-22T16:37:42.342Z] [INFO] 
-[2025-11-22T16:37:42.342Z] [INFO] --- STRUCTURAL CHECK ---
-[2025-11-22T16:37:42.349Z] [INFO] 
-[2025-11-22T16:37:42.349Z] [INFO] --- DEPENDENCY CHECK ---
-[2025-11-22T16:37:42.352Z] [INFO] 
-[2025-11-22T16:37:42.352Z] [INFO] ============================================================
-[2025-11-22T16:37:42.352Z] [INFO] TEST SUMMARY
-[2025-11-22T16:37:42.352Z] [INFO] ============================================================
-[2025-11-22T16:37:42.352Z] [INFO] Passed: 20
-[2025-11-22T16:37:42.352Z] [INFO] Failed: 0
-[2025-11-22T16:37:42.352Z] [INFO] Warnings: 7
-[2025-11-22T16:37:42.352Z] [INFO] 
-[2025-11-22T16:37:42.352Z] [WARN] --- WARNINGS ---
-[2025-11-22T16:37:42.352Z] [WARN] 1. src/js/core/Engine.js: Uses THREE without typeof check
-[2025-11-22T16:37:42.352Z] [WARN] 2. src/js/core/Environment.js: Uses THREE without typeof check
-[2025-11-22T16:37:42.352Z] [WARN] 3. src/js/core/Environment.js: Has 6 console.error calls - review for proper error handling
-[2025-11-22T16:37:42.352Z] [WARN] 4. src/js/entities/Planet.js: Uses THREE without typeof check
-[2025-11-22T16:37:42.352Z] [WARN] 5. src/js/entities/SolarSystem.js: Uses THREE without typeof check
-[2025-11-22T16:37:42.352Z] [WARN] 6. src/js/entities/Star.js: Uses THREE without typeof check
-[2025-11-22T16:37:42.352Z] [WARN] 7. src/js/utils/utils.js: Uses THREE without typeof check
+[2025-11-22T16:57:57.237Z] [INFO] ============================================================
+[2025-11-22T16:57:57.242Z] [INFO] SPACESIM TEST RUNNER
+[2025-11-22T16:57:57.242Z] [INFO] ============================================================
+[2025-11-22T16:57:57.242Z] [INFO] 
+[2025-11-22T16:57:57.246Z] [INFO] Found 20 JavaScript files to test
+[2025-11-22T16:57:57.246Z] [INFO] 
+[2025-11-22T16:57:57.246Z] [INFO] --- SYNTAX CHECK ---
+[2025-11-22T16:57:57.247Z] [PASS] Syntax OK: src/config.js
+[2025-11-22T16:57:57.247Z] [PASS] Syntax OK: src/js/core/AssetManager.js
+[2025-11-22T16:57:57.248Z] [PASS] Syntax OK: src/js/core/AudioManager.js
+[2025-11-22T16:57:57.249Z] [PASS] Syntax OK: src/js/core/Engine.js
+[2025-11-22T16:57:57.249Z] [PASS] Syntax OK: src/js/core/Environment.js
+[2025-11-22T16:57:57.249Z] [PASS] Syntax OK: src/js/core/Game.js
+[2025-11-22T16:57:57.250Z] [PASS] Syntax OK: src/js/core/InputManager.js
+[2025-11-22T16:57:57.250Z] [PASS] Syntax OK: src/js/core/SceneManager.js
+[2025-11-22T16:57:57.251Z] [PASS] Syntax OK: src/js/entities/Entity.js
+[2025-11-22T16:57:57.251Z] [PASS] Syntax OK: src/js/entities/Planet.js
+[2025-11-22T16:57:57.251Z] [PASS] Syntax OK: src/js/entities/SolarSystem.js
+[2025-11-22T16:57:57.252Z] [PASS] Syntax OK: src/js/entities/Spacecraft.js
+[2025-11-22T16:57:57.252Z] [PASS] Syntax OK: src/js/entities/Star.js
+[2025-11-22T16:57:57.252Z] [PASS] Syntax OK: src/js/utils/DebugLogger.js
+[2025-11-22T16:57:57.253Z] [PASS] Syntax OK: src/js/utils/Gravity.js
+[2025-11-22T16:57:57.253Z] [PASS] Syntax OK: src/js/utils/KeplerianOrbit.js
+[2025-11-22T16:57:57.253Z] [PASS] Syntax OK: src/js/utils/MathUtils.js
+[2025-11-22T16:57:57.254Z] [PASS] Syntax OK: src/js/utils/PhysicsUtils.js
+[2025-11-22T16:57:57.254Z] [PASS] Syntax OK: src/js/utils/utils.js
+[2025-11-22T16:57:57.254Z] [PASS] Syntax OK: src/startup.js
+[2025-11-22T16:57:57.254Z] [INFO] 
+[2025-11-22T16:57:57.254Z] [INFO] --- STRUCTURAL CHECK ---
+[2025-11-22T16:57:57.260Z] [INFO] 
+[2025-11-22T16:57:57.261Z] [INFO] --- DEPENDENCY CHECK ---
+[2025-11-22T16:57:57.263Z] [INFO] 
+[2025-11-22T16:57:57.263Z] [INFO] ============================================================
+[2025-11-22T16:57:57.263Z] [INFO] TEST SUMMARY
+[2025-11-22T16:57:57.263Z] [INFO] ============================================================
+[2025-11-22T16:57:57.263Z] [INFO] Passed: 20
+[2025-11-22T16:57:57.263Z] [INFO] Failed: 0
+[2025-11-22T16:57:57.263Z] [INFO] Warnings: 7
+[2025-11-22T16:57:57.263Z] [INFO] 
+[2025-11-22T16:57:57.263Z] [WARN] --- WARNINGS ---
+[2025-11-22T16:57:57.263Z] [WARN] 1. src/js/core/Engine.js: Uses THREE without typeof check
+[2025-11-22T16:57:57.263Z] [WARN] 2. src/js/core/Environment.js: Uses THREE without typeof check
+[2025-11-22T16:57:57.263Z] [WARN] 3. src/js/core/Environment.js: Has 6 console.error calls - review for proper error handling
+[2025-11-22T16:57:57.263Z] [WARN] 4. src/js/entities/Planet.js: Uses THREE without typeof check
+[2025-11-22T16:57:57.263Z] [WARN] 5. src/js/entities/SolarSystem.js: Uses THREE without typeof check
+[2025-11-22T16:57:57.263Z] [WARN] 6. src/js/entities/Star.js: Uses THREE without typeof check
+[2025-11-22T16:57:57.263Z] [WARN] 7. src/js/utils/utils.js: Uses THREE without typeof check

@@ -61,13 +61,15 @@
     <!-- Load scripts directly instead of dynamically -->
     <!-- Three.js Core Library -->
     <script src="libs/three.js"></script>
-    <script src="libs/three-export.js"></script>
-    <script src="libs/debug-three.js"></script>
-    
-    <!-- Three.js Extensions -->
+
+    <!-- Three.js Extensions (modified for global THREE) -->
     <script src="libs/three/examples/jsm/controls/OrbitControls.js"></script>
     <script src="libs/three/examples/jsm/loaders/DRACOLoader.js"></script>
     <script src="libs/three/examples/jsm/loaders/GLTFLoader.js"></script>
+
+    <!-- THREE.js Extension Loader (ensures extensions are on THREE namespace) -->
+    <script src="libs/three-loader.js"></script>
+    <script src="libs/debug-three.js"></script>
     
     <!-- Game Configuration -->
     <script src="src/config.js"></script>
