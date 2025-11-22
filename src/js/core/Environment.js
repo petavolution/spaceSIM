@@ -568,6 +568,5 @@ class Environment {
     }
 }
 
-// Export as singleton instance
-console.log('Creating Environment instance');
-window.environment = new Environment(window.sceneManager); 
+// Export class - instantiate later when SceneManager is ready
+window.Environment = Environment; 

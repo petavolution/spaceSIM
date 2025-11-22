@@ -134,35 +134,19 @@ class Planet extends Entity {
     }
     
     /**
-     * Update the planet's position using Keplerian orbits
+     * Update the planet's position and rotation
      * @param {number} deltaTime - Time since last update
      */
-    update(deltaTime, elapsedTime = 0) {
-        // Use KeplerianOrbit utility for realistic orbits
-        if (typeof window.getOrbitalPosition === 'function' || (window.KeplerianOrbit && window.KeplerianOrbit.getOrbitalPosition)) {
-            // Import utility if not already
-            const getOrbitalPosition = window.getOrbitalPosition || (window.KeplerianOrbit && window.KeplerianOrbit.getOrbitalPosition);
-            const pos = getOrbitalPosition({
-                semiMajorAxis: this.semiMajorAxis,
-                eccentricity: this.eccentricity,
-                inclination: this.inclination,
-                longitudeOfAscendingNode: this.longitudeOfAscendingNode,
-                argumentOfPeriapsis: this.argumentOfPeriapsis,
-                meanAnomalyAtEpoch: this.meanAnomalyAtEpoch,
-                orbitalPeriod: this.orbitalPeriod
-            }, elapsedTime);
-            this.setPosition(pos.x, pos.y, pos.z);
-        } else {
-            // Fallback to legacy circular orbit
-            this.orbitAngle += (deltaTime / this.orbitalPeriod) * 2 * Math.PI;
-            const x = Math.cos(this.orbitAngle) * this.semiMajorAxis;
-            const z = Math.sin(this.orbitAngle) * this.semiMajorAxis;
-            this.setPosition(x, 0, z);
-        }
-        // Optionally: handle self-rotation, rings, atmosphere, etc.
+    update(deltaTime) {
+        if (!this.object) return;
+
+        // Simple circular orbit
+        this.orbitAngle += (deltaTime / this.orbitalPeriod) * 0.1;
+        const x = Math.cos(this.orbitAngle) * this.semiMajorAxis;
+        const z = Math.sin(this.orbitAngle) * this.semiMajorAxis;
         this.object.position.set(x, 0, z);
-        
-        // Rotate the planet
+
+        // Rotate the planet on its axis
         this.object.rotation.y += this.rotationSpeed * deltaTime;
     }
     
