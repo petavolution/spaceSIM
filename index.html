@@ -72,8 +72,13 @@
     <!-- Game Configuration -->
     <script src="src/config.js"></script>
 
-    <!-- Utility Scripts -->
+    <!-- Utility Scripts (load first) -->
+    <script src="src/js/utils/DebugLogger.js"></script>
     <script src="src/js/utils/utils.js"></script>
+    <script src="src/js/utils/MathUtils.js"></script>
+    <script src="src/js/utils/PhysicsUtils.js"></script>
+    <script src="src/js/utils/Gravity.js"></script>
+    <script src="src/js/utils/KeplerianOrbit.js"></script>
 
     <!-- Core Game Modules In Initialization Order -->
     <script src="src/js/entities/Entity.js"></script>

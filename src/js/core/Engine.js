@@ -6,21 +6,32 @@
 
 class Engine {
   constructor() {
+    // Debug logger reference
+    this.log = window.debugLogger || {
+      debug: () => {},
+      info: () => {},
+      warn: () => {},
+      error: () => {}
+    };
+
+    this.log.info('Engine', 'Constructing Engine instance');
+
     // Core components
     this.sceneManager = null;
     this.assetManager = null;
     this.inputManager = null;
     this.audioManager = null;
-    
+
     // Game entities
     this.solarSystem = null;
     this.spacecraft = null;
-    
+    this.environment = null;
+
     // Engine state
     this.isInitialized = false;
     this.isRunning = false;
     this.isPaused = false;
-    
+
     // Performance monitoring
     this.lastTime = 0;
     this.frameTime = 0;
@@ -28,51 +39,58 @@ class Engine {
     this.fpsUpdateInterval = 500; // ms
     this.lastFpsUpdate = 0;
     this.fps = 0;
-    
+
     // Bind methods to maintain scope
     this.update = this.update.bind(this);
     this.render = this.render.bind(this);
     this.gameLoop = this.gameLoop.bind(this);
-    
+
     // Event listeners
     this.eventListeners = {};
+
+    this.log.debug('Engine', 'Constructor complete');
   }
   
   /**
    * Initializes the game engine and all related components
    */
   async init() {
-    console.log('Initializing Engine...');
+    this.log.info('Engine', 'Starting initialization');
     updateLoadingProgress(10, 'Starting engine initialization...');
-    
+
     try {
       // Initialize Three.js first
+      this.log.debug('Engine', 'Initializing Three.js');
       await this._initThreeJs();
       updateLoadingProgress(20, 'Three.js initialized');
-      
+
       // Create core managers
+      this.log.debug('Engine', 'Creating core managers');
       await this._initCoreManagers();
       updateLoadingProgress(40, 'Core managers initialized');
-      
+
       // Load assets
+      this.log.debug('Engine', 'Loading assets');
       await this._loadAssets();
       updateLoadingProgress(60, 'Assets loaded');
-      
+
       // Create game world
+      this.log.debug('Engine', 'Creating game world');
       await this._createGameWorld();
       updateLoadingProgress(80, 'Game world created');
-      
+
       // Set up input handling
+      this.log.debug('Engine', 'Setting up input handlers');
       this._setupInputHandlers();
       updateLoadingProgress(90, 'Input handlers set up');
-      
+
       // Setup is complete
       this.isInitialized = true;
-      console.log('Engine initialization complete');
-      
+      this.log.info('Engine', 'Initialization complete');
+
       return true;
     } catch (error) {
-      console.error('Failed to initialize engine:', error);
+      this.log.error('Engine', `Initialization failed: ${error.message}`, { stack: error.stack });
       updateDebugText(`Engine error: ${error.message}`);
       return false;
     }
